@@ -30873,7 +30873,7 @@ async function main() {
         owner: owner,
         repo: repo,
         workflow_id: workflowId,
-        ref: reference === "" ? "main" : reference,
+        ref: reference,
         inputs: parsedInputs,
     });
 }
