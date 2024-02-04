@@ -1,0 +1,36 @@
+{
+  "name": "trigger-workflow-action",
+  "version": "0.1.0",
+  "description": "GitHub Action for triggering workflows",
+  "main": "index.js",
+  "scripts": {
+    "build": "ncc build src/main.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dusansimic/trigger-workflow-action.git"
+  },
+  "keywords": [
+    "github",
+    "action",
+    "trigger",
+    "workflow"
+  ],
+  "author": "Dušan Simić <dusan.simic1810@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/dusansimic/trigger-workflow-action/issues"
+  },
+  "homepage": "https://github.com/dusansimic/trigger-workflow-action#readme",
+  "dependencies": {
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0",
+    "@octokit/plugin-request-log": "^4.0.0",
+    "@octokit/plugin-retry": "^6.0.1",
+    "@octokit/types": "^12.4.0"
+  },
+  "devDependencies": {
+    "@vercel/ncc": "^0.38.1",
+    "typescript": "^5.3.3"
+  }
+}

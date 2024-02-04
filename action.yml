@@ -1,0 +1,31 @@
+name: Trigger workflow
+author: Dušan Simić
+description: Trigger other workflows
+inputs:
+  github-token:
+    description: The GitHub token used to trigger workflow
+    default: ${{ github.token }}
+    required: false
+  name:
+    description: Workflow name to be triggered (the name of the file)
+    required: true
+  owner:
+    description: Owner of the repository that contains the workflow (username or org. name)
+    required: true
+  repo:
+    description: Name of the repository
+    required: true
+  ref:
+    description: Reference name (branch or tag)
+    required: false
+    default: main
+  inputs:
+    description: Input parameters for the workflow (maximum number of inputs is 10)
+    required: false
+  debug:
+    description: Enable debug mode
+    required: false
+    default: false
+runs:
+  using: node20
+  main: dist/index.js
